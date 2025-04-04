@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import API from "../utils/axiosInstance";
 import { AuthContext } from "../features/authContext";
 
-const socket = io("http://localhost:5000"); // Replace with your backend URL
+const socket = io("https://ai-featured-chat-app.onrender.com"); // Replace with your backend URL
 
 const ChatWindow = () => {
   const { user } = useContext(AuthContext);
@@ -19,7 +19,7 @@ const ChatWindow = () => {
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
 
-  useEffect(() => {
+  useEffect(() => { 
     if (chat && inputRef.current) {
       inputRef.current.focus();
     }
