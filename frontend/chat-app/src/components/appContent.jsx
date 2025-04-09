@@ -12,6 +12,7 @@ import { AuthContext } from "../features/authContext";
 import { useContext } from "react";
 import ChatWindow from "./chatWindow";
 import AIChat from "./ai-chat";
+import NotFound from "./notFound";
 
 function AppContent() {
     const { user } = useContext(AuthContext);
@@ -52,7 +53,10 @@ function AppContent() {
                         <AIChat />
                     </PrivateRoute>}
                 />
+                <Route path="*" element={<NotFound />} />
             </Routes>
+            
+
         </>
     );
 }
