@@ -29,7 +29,7 @@ const LoginWithEmail = () => {
       alert("Login Successful");
       const { token, user } = res.data;
       login(token, user);
-      navigate("/");
+      navigate("/chats");
     } catch (err) {
       alert("Login Failed: " + (err.response.data.message || err.response.data.error));
     }

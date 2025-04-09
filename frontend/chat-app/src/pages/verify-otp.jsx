@@ -16,7 +16,7 @@ const VerifyOtp = () => {
             alert("Login Successful");
             const { token, user } = res.data;
             login(token, user);
-            navigate("/");
+            navigate("/chats");
         } catch (err) {
             alert(err.response.data.message || err.response.data.error);
         }
