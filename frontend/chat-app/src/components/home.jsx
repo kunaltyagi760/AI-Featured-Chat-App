@@ -56,7 +56,7 @@ const UserList = () => {
     // Handle creating a chat and navigating to chat page
     const handleMessageClick = async (userId) => {
         if (!user) {
-            navigate("/login");
+            navigate("/login-email");
             return;
         }
 
